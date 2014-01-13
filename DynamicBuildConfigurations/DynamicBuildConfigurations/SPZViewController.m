@@ -1,14 +1,22 @@
 //
-//  SPZViewController.m
-//  DynamicBuildConfigurations
+//  TUTViewController.m
+//  TUTBuildConfigurations
 //
-//  Created by Brad Woodard on 1/13/14.
-//  Copyright (c) 2014 Spartz, Inc. All rights reserved.
+//  Created by Brad Woodard on 12/12/13.
+//  Copyright (c) 2013 Brad Woodard. All rights reserved.
 //
 
 #import "SPZViewController.h"
+#import "SPZConfiguration.h"
 
 @interface SPZViewController ()
+{
+    __weak IBOutlet UILabel *mConfigurationBuildLabel;
+    __weak IBOutlet UILabel *mGACodeLabel;
+    __weak IBOutlet UILabel *mFlurryCodeLabel;
+    __weak IBOutlet UILabel *mAPIURLLabel;
+    
+}
 
 @end
 
@@ -18,6 +26,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // UI Elements
+    mConfigurationBuildLabel.text = [SPZConfiguration configuration];
+    mGACodeLabel.text = [SPZConfiguration CAMGoogleAnalyticsCode];
+    mFlurryCodeLabel.text = [SPZConfiguration CAMFlurryCode];
+    mAPIURLLabel.text = [SPZConfiguration CAMurl];
 }
 
 - (void)didReceiveMemoryWarning
