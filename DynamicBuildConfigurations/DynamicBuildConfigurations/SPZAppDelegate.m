@@ -8,18 +8,11 @@
 
 #import "SPZAppDelegate.h"
 
-// 1. Import the SPZConfiguration object
-#import "SPZConfiguration.h"
-
 @implementation SPZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-    // 2. Initialize the SPZConfiguration object
-    [SPZConfiguration getSharedInstance];
-    
     return YES;
 }
 							
