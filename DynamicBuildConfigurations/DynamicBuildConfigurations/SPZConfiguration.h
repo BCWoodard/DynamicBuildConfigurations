@@ -11,10 +11,10 @@
 @interface SPZConfiguration : NSObject
 
 // Properties
-@property (strong, nonatomic) NSString *configuration;
-@property (strong, nonatomic) NSString *FlurryCode;
-@property (strong, nonatomic) NSString *URL;
-@property (strong, nonatomic) NSString *GoogleCode;
+@property (strong, nonatomic) NSString *_mConfiguration;
+@property (strong, nonatomic) NSString *_mFlurryCode;
+@property (strong, nonatomic) NSString *_mURL;
+@property (strong, nonatomic) NSString *_mGoogleCode;
 
 // Methods
 + (SPZConfiguration *)getSharedInstance;

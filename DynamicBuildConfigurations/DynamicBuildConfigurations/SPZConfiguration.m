@@ -18,7 +18,7 @@
 static SPZConfiguration *_mSharedInstance = nil;
 
 // 2. Synthesize the properties
-@synthesize configuration, FlurryCode, URL, GoogleCode;
+@synthesize _mConfiguration, _mFlurryCode, _mURL, _mGoogleCode;
 
 // 3. Create a shared instance of SPZConfiguration
 #pragma mark - Create Shared Instance
@@ -38,7 +38,7 @@ static SPZConfiguration *_mSharedInstance = nil;
     // a. Read the CONFIGURATION SETTING from the -Info.plist
     if (self = [super init]) {
         
-        self.configuration = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuration"];
+        self._mConfiguration = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuration"];
     
         // b. Read the Configuration dictionary
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Configurations" ofType:@"plist"];
@@ -48,7 +48,7 @@ static SPZConfiguration *_mSharedInstance = nil;
         NSDictionary *buildConfigurationDictionary;
         
         // d. Identify the configuration for the build and populate 'buildConfigurationDictionary'
-        if ([self.configuration isEqualToString:@"Development"]) {
+        if ([self._mConfiguration isEqualToString:@"Development"]) {
             buildConfigurationDictionary = [configurationsDictionary objectForKey:@"Development"];
         } else {
             buildConfigurationDictionary = [configurationsDictionary objectForKey:@"Production"];
@@ -56,9 +56,9 @@ static SPZConfiguration *_mSharedInstance = nil;
         
         // e. Assign values to the properties
         //self.configuration = [buildConfigurationDictionary objectForKey:@"Configuration"];
-        self.FlurryCode = [buildConfigurationDictionary objectForKey:@"FlurryCode"];
-        self.URL = [buildConfigurationDictionary objectForKey:@"URL"];
-        self.GoogleCode = [buildConfigurationDictionary objectForKey:@"GoogleCode"];
+        self._mFlurryCode = [buildConfigurationDictionary objectForKey:@"FlurryCode"];
+        self._mURL = [buildConfigurationDictionary objectForKey:@"URL"];
+        self._mGoogleCode = [buildConfigurationDictionary objectForKey:@"GoogleCode"];
         
     }
     

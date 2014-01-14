@@ -29,11 +29,11 @@
     // 1. Get an instance of SPZConfiguration
     SPZConfiguration *buildSettings = [SPZConfiguration getSharedInstance];
     
-    // UI Elements
-    mEnvironmentLabel.text = buildSettings.configuration;
-    mGACodeLabel.text = buildSettings.GoogleCode;
-    mFlurryCodeLabel.text = buildSettings.FlurryCode;
-    mAPIURLLabel.text = buildSettings.URL;
+    // 2. Populate the UI Elements
+    mEnvironmentLabel.text = buildSettings._mConfiguration;
+    mGACodeLabel.text = buildSettings._mGoogleCode;
+    mFlurryCodeLabel.text = buildSettings._mFlurryCode;
+    mAPIURLLabel.text = buildSettings._mURL;
 }
 
 - (void)didReceiveMemoryWarning
