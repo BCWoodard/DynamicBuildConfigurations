@@ -27,11 +27,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // 1. Get an instance of SPZConfiguration
+    SPZConfiguration *buildSettings = [SPZConfiguration getSharedInstance];
+    
     // UI Elements
-    mConfigurationBuildLabel.text = [SPZConfiguration configuration];
-    mGACodeLabel.text = [SPZConfiguration CAMGoogleAnalyticsCode];
-    mFlurryCodeLabel.text = [SPZConfiguration CAMFlurryCode];
-    mAPIURLLabel.text = [SPZConfiguration CAMurl];
+    mConfigurationBuildLabel.text = buildSettings.configuration;
+    mGACodeLabel.text = buildSettings.GoogleCode;
+    mFlurryCodeLabel.text = buildSettings.FlurryCode;
+    mAPIURLLabel.text = buildSettings.URL;
 }
 
 - (void)didReceiveMemoryWarning

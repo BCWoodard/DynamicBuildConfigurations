@@ -121,13 +121,11 @@
 		4A2E81661884AAD4000189AF /* DynamicBuildConfigurations */ = {
 			isa = PBXGroup;
 			children = (
-				4A2E819A1884AB88000189AF /* SPZConfiguration.h */,
-				4A2E819B1884AB88000189AF /* SPZConfiguration.m */,
-				4A2E819C1884AB88000189AF /* SPZViewController.h */,
-				4A2E819D1884AB88000189AF /* SPZViewController.m */,
 				4A2E816F1884AAD4000189AF /* SPZAppDelegate.h */,
 				4A2E81701884AAD4000189AF /* SPZAppDelegate.m */,
 				4A2E81721884AAD4000189AF /* Main.storyboard */,
+				4AC258A418859A480072B287 /* Model */,
+				4AC258A518859A590072B287 /* Controller */,
 				4A2E81781884AAD4000189AF /* Images.xcassets */,
 				4A2E81A41884AC53000189AF /* Images */,
 				4A2E81671884AAD4000189AF /* Supporting Files */,
@@ -172,6 +170,24 @@
 				4A2E81971884AB88000189AF /* icon@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		4AC258A418859A480072B287 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A2E819A1884AB88000189AF /* SPZConfiguration.h */,
+				4A2E819B1884AB88000189AF /* SPZConfiguration.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4AC258A518859A590072B287 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A2E819C1884AB88000189AF /* SPZViewController.h */,
+				4A2E819D1884AB88000189AF /* SPZViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
