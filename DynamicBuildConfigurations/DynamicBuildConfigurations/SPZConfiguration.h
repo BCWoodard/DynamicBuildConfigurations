@@ -10,9 +10,21 @@
 
 @interface SPZConfiguration : NSObject
 
+/*
 + (NSString *)configuration;
 + (NSString *)CAMFlurryCode;
 + (NSString *)CAMurl;
 + (NSString *)CAMGoogleAnalyticsCode;
+*/
+
+// Properties
+
+@property (strong, nonatomic) NSString *configuration;
+@property (strong, nonatomic) NSString *FlurryCode;
+@property (strong, nonatomic) NSString *URL;
+@property (strong, nonatomic) NSString *GoogleCode;
+
+// Methods
++ (SPZConfiguration *)getSharedInstance;
 
 @end

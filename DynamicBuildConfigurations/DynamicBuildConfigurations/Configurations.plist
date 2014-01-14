@@ -4,21 +4,21 @@
 <dict>
 	<key>Production</key>
 	<dict>
-		<key>CAMFlurryCode</key>
-		<string>FlurryForProd</string>
-		<key>CAMurl</key>
+		<key>FlurryCode</key>
+		<string>Flurry for PROD</string>
+		<key>URL</key>
 		<string>http://prod.spartzinc.com</string>
-		<key>CAMGoogleAnalyticsCode</key>
-		<string>GAforPROD</string>
+		<key>GoogleCode</key>
+		<string>GA for PROD</string>
 	</dict>
 	<key>Development</key>
 	<dict>
-		<key>CAMFlurryCode</key>
-		<string>FlurryForDev</string>
-		<key>CAMurl</key>
+		<key>FlurryCode</key>
+		<string> Flurry for DEV</string>
+		<key>URL</key>
 		<string>http://dev.spartzinc.com</string>
-		<key>CAMGoogleAnalyticsCode</key>
-		<string>GAforDEV</string>
+		<key>GoogleCode</key>
+		<string>GA for DEV</string>
 	</dict>
 </dict>
 </plist>
