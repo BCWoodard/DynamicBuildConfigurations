@@ -1,21 +1,14 @@
 //
-//  TUTConfiguration.h
-//  TUTBuildConfigurations
+//  SPZConfiguration.h
+//  DynamicBuildConfigurations
 //
-//  Created by Brad Woodard on 12/12/13.
-//  Copyright (c) 2013 Brad Woodard. All rights reserved.
+//  Created by Brad Woodard on 1/13/14.
+//  Copyright (c) 2014 Brad Woodard. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface SPZConfiguration : NSObject
-
-/*
-+ (NSString *)configuration;
-+ (NSString *)CAMFlurryCode;
-+ (NSString *)CAMurl;
-+ (NSString *)CAMGoogleAnalyticsCode;
-*/
 
 // Properties
 @property (strong, nonatomic) NSString *configuration;
