@@ -14,13 +14,13 @@
 
 @implementation SPZConfiguration
 
-// 1. Declare and assign 'nil' value to an SPZConfiguration object
+// 1. STATIC declaration of the SPZConfiguration object to ensure only 1 instance exists
 static SPZConfiguration *_mSharedInstance = nil;
 
-// 2. Synthesize the properties
+// 2. Synthesize the object properties
 @synthesize _mConfiguration, _mFlurryCode, _mURL, _mGoogleCode;
 
-// 3. Create a shared instance of SPZConfiguration
+// 3. Create a shared instance of SPZConfiguration that can be called within a controller
 #pragma mark - Create Shared Instance
 + (SPZConfiguration *)getSharedInstance
 {
@@ -35,9 +35,9 @@ static SPZConfiguration *_mSharedInstance = nil;
 #pragma mark - Override Initializer
 - (id)init
 {
-    // a. Read the CONFIGURATION SETTING from the -Info.plist
     if (self = [super init]) {
         
+        // a. Read the CONFIGURATION SETTING from the -Info.plist
         self._mConfiguration = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"Configuration"];
     
         // b. Read the Configuration dictionary
@@ -54,8 +54,7 @@ static SPZConfiguration *_mSharedInstance = nil;
             buildConfigurationDictionary = [configurationsDictionary objectForKey:@"Production"];
         }
         
-        // e. Assign values to the properties
-        //self.configuration = [buildConfigurationDictionary objectForKey:@"Configuration"];
+        // e. Assign values to the remaining properties
         self._mFlurryCode = [buildConfigurationDictionary objectForKey:@"FlurryCode"];
         self._mURL = [buildConfigurationDictionary objectForKey:@"URL"];
         self._mGoogleCode = [buildConfigurationDictionary objectForKey:@"GoogleCode"];
