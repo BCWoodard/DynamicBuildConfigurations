@@ -11,11 +11,10 @@
 
 @interface SPZViewController ()
 {
-    __weak IBOutlet UILabel *mConfigurationBuildLabel;
-    __weak IBOutlet UILabel *mGACodeLabel;
+    __weak IBOutlet UILabel *mEnvironmentLabel;
     __weak IBOutlet UILabel *mFlurryCodeLabel;
     __weak IBOutlet UILabel *mAPIURLLabel;
-    
+    __weak IBOutlet UILabel *mGACodeLabel;
 }
 
 @end
@@ -31,7 +30,7 @@
     SPZConfiguration *buildSettings = [SPZConfiguration getSharedInstance];
     
     // UI Elements
-    mConfigurationBuildLabel.text = buildSettings.configuration;
+    mEnvironmentLabel.text = buildSettings.configuration;
     mGACodeLabel.text = buildSettings.GoogleCode;
     mFlurryCodeLabel.text = buildSettings.FlurryCode;
     mAPIURLLabel.text = buildSettings.URL;

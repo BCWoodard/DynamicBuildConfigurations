@@ -18,7 +18,6 @@
 */
 
 // Properties
-
 @property (strong, nonatomic) NSString *configuration;
 @property (strong, nonatomic) NSString *FlurryCode;
 @property (strong, nonatomic) NSString *URL;

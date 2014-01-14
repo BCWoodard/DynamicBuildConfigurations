@@ -61,6 +61,7 @@ static SPZConfiguration *_mSharedInstance = nil;
         }
         
         // e. Assign values to the properties
+        //self.configuration = [buildConfigurationDictionary objectForKey:@"Configuration"];
         self.FlurryCode = [buildConfigurationDictionary objectForKey:@"FlurryCode"];
         self.URL = [buildConfigurationDictionary objectForKey:@"URL"];
         self.GoogleCode = [buildConfigurationDictionary objectForKey:@"GoogleCode"];
