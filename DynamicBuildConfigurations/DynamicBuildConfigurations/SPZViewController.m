@@ -24,16 +24,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     // 1. Get an instance of SPZConfiguration
-    SPZConfiguration *buildSettings = [SPZConfiguration getSharedInstance];
+    SPZConfiguration *mBuildSettings = [SPZConfiguration getSharedInstance];
     
     // 2. Populate the UI Elements
-    mEnvironmentLabel.text = buildSettings._mConfiguration;
-    mGACodeLabel.text = buildSettings._mGoogleCode;
-    mFlurryCodeLabel.text = buildSettings._mFlurryCode;
-    mAPIURLLabel.text = buildSettings._mURL;
+    mEnvironmentLabel.text = mBuildSettings._mConfiguration;
+    mGACodeLabel.text = mBuildSettings._mGoogleCode;
+    mFlurryCodeLabel.text = mBuildSettings._mFlurryCode;
+    mAPIURLLabel.text = mBuildSettings._mURL;
 }
 
 - (void)didReceiveMemoryWarning
